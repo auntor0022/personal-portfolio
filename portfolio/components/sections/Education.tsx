@@ -16,13 +16,6 @@ const education = [
     location: "Naogaon, Rajshahi, Bangladesh",
     description: "Completed Meta&apos;s professional certificate covering advanced React patterns, testing methodologies, UI/UX principles, and performance optimization techniques.",
   },
-  {
-    degree: "Advanced TypeScript & System Design",
-    institution: "Frontend Masters",
-    period: "2023",
-    location: "Online",
-    description: "Deep dive into advanced TypeScript generics, type-level programming, micro-frontend architectures, and scalable frontend system design patterns.",
-  },
 ];
 
 export function Education() {

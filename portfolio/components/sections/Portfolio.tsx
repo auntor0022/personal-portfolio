@@ -6,36 +6,28 @@ import { ExternalLink } from "lucide-react";
 // Base project data without the layout type
 const baseProjects = [
   {
-    title: "E-Commerce Storefront",
-    category: "React / Next.js",
-    description: "A high-performance headless e-commerce frontend built with Next.js and the Shopify Storefront API. Features server components, optimistic UI updates, and sub-second page loads.",
-    tags: ["Next.js", "TypeScript", "Shopify API"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    link: "#",
+    title: "WorldWatch - Newspaper Platform",
+    category: "Full Stack (MERN)",
+    description: "A full-featured newspaper platform with authentication, premium subscriptions, and admin dashboard. Built with React, Firebase, Node.js, Express, and MongoDB. Includes Stripe payments, JWT security, article management, analytics charts, and role-based access control.",
+    tags: ["React", "Node.js", "MongoDB", "Firebase", "Stripe", "JWT"],
+    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80",
+    link: "https://world-watch-app.web.app/",
   },
   {
-    title: "Analytics Dashboard",
-    category: "Frontend",
-    description: "Real-time analytics with interactive charts and a drag-and-drop widget system.",
-    tags: ["React", "D3.js", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    link: "#",
+    title: "Ink.Link - Library Management System",
+    category: "Full Stack (MERN)",
+    description: "A full-stack library management system that enables users to browse, borrow, and manage books with secure authentication. Features Firebase auth, JWT-protected routes, real-time borrowing system, and a responsive UI with smooth animations.",
+    tags: ["React", "Node.js", "MongoDB", "Firebase", "JWT", "Tailwind CSS"],
+    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
+    link: "https://ink-link-7f9d0.web.app/",
   },
   {
-    title: "Component Library",
-    category: "UI Engineering",
-    description: "Accessible, themeable design system.",
-    tags: ["Storybook", "Radix UI"],
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80",
-    link: "#",
-  },
-  {
-    title: "Fintech Web App",
-    category: "PWA",
-    description: "Mobile-first PWA featuring biometric auth and real-time WebSockets.",
-    tags: ["React", "PWA", "Framer"],
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f2?auto=format&fit=crop&w=800&q=80",
-    link: "#",
+    title: "Plant Mates - Gardening Community Platform",
+    category: "Full Stack (MERN)",
+    description: "A community-driven gardening platform where users can share tips, explore local gardeners, and discover trending content. Includes authentication, CRUD operations, like system, filtering, and a fully responsive UI with smooth animations.",
+    tags: ["React", "Node.js", "MongoDB", "Firebase", "Tailwind CSS"],
+    image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80",
+    link: "https://plant-mates-app.web.app/",
   },
 ];
 
@@ -48,10 +40,10 @@ export function Portfolio() {
   useEffect(() => {
     // 1. Shuffle the projects array
     const shuffledProjects = [...baseProjects].sort(() => Math.random() - 0.5);
-    
+
     // 2. Shuffle the layout types
     const shuffledLayouts = [...layoutTypes].sort(() => Math.random() - 0.5);
-    
+
     // 3. Assign a random layout to each project
     const randomizedProjects = shuffledProjects.map((project, index) => ({
       ...project,
@@ -132,11 +124,11 @@ export function Portfolio() {
                 <a href={project.link} className="group flex flex-col h-full min-h-[400px] glass-panel rounded-3xl p-8 relative overflow-hidden transition-all duration-500 hover:border-[#D946EF]/30 bg-[#0a0a0a]/50">
                   <div className="absolute top-0 right-0 w-48 h-48 bg-[#D946EF]/10 rounded-full blur-[60px] group-hover:bg-[#D946EF]/20 transition-colors duration-500"></div>
                   <ExternalLink className="absolute top-8 right-8 w-5 h-5 text-textSecondary group-hover:text-white transition-colors duration-300" />
-                  
+
                   <span className="text-xs font-bold text-white/40 uppercase tracking-[0.2em] mb-12">{project.category}</span>
                   <h3 className="text-2xl font-bold text-white mb-4 leading-tight group-hover:text-[#D946EF] transition-colors duration-300">{project.title}</h3>
                   <p className="text-white/50 text-sm leading-relaxed mb-auto line-clamp-3 font-medium">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mt-8">
                     {project.tags.map((tag, j) => (
                       <span key={j} className="text-xs font-bold text-white/30 bg-black/50 px-3 py-1 rounded-full">{tag}</span>
