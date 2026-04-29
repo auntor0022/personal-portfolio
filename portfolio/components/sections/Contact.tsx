@@ -30,7 +30,7 @@ export function Contact() {
                 <input
                   type="text"
                   id="name"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   className="w-full bg-white/5 border border-white-10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primaryAccent/50 focus:shadow-glow-primary/20 transition-all duration-300 text-sm"
                 />
               </div>
@@ -39,7 +39,7 @@ export function Contact() {
                 <input
                   type="email"
                   id="email"
-                  placeholder="john@example.com"
+                  placeholder="you@example.com"
                   className="w-full bg-white/5 border border-white-10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-primaryAccent/50 focus:shadow-glow-primary/20 transition-all duration-300 text-sm"
                 />
               </div>
@@ -77,7 +77,7 @@ export function Contact() {
                 <Mail className="w-5 h-5 text-primaryAccent" />
               </div>
               <h4 className="text-white font-bold mb-1">Email</h4>
-              <a href="mailto:hello@mthatcher.com" className="text-textSecondary text-sm hover:text-primaryAccent transition-colors duration-300">
+              <a href="mailto:auntor0022@gmail.com" className="text-textSecondary text-sm hover:text-primaryAccent transition-colors duration-300">
                 auntor0022@gmail.com
               </a>
             </div>
@@ -87,7 +87,7 @@ export function Contact() {
                 <Phone className="w-5 h-5 text-secondaryAccent" />
               </div>
               <h4 className="text-white font-bold mb-1">Phone</h4>
-              <a href="tel:+12135551234" className="text-textSecondary text-sm hover:text-secondaryAccent transition-colors duration-300">
+              <a href="tel:+8801703660796" className="text-textSecondary text-sm hover:text-secondaryAccent transition-colors duration-300">
                 +88 01703-660796
               </a>
             </div>

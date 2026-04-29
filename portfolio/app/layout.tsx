@@ -35,7 +35,7 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Miles Thatcher | Frontend Developer",
+  title: "MD AUNTOR RAHMAN | Frontend Developer",
   description: "Frontend Developer & UI Engineer crafting high-performance web interfaces with React, TypeScript, and modern CSS.",
 };
 
