@@ -22,7 +22,7 @@ export function About() {
           <div className="glass-panel rounded-3xl p-10 bg-[#0a0a0a]/50">
             <h3 className="text-3xl font-handwritten text-white mb-6">Who I Am</h3>
             <p className="text-white/60 leading-relaxed mb-6 font-mono text-sm uppercase tracking-wide">
-              I&apos;m I’m MD Auntor Rahman — a full-stack developer passionate about building smooth, efficient, and user-focused web applications.
+              I&apos;m MD Auntor Rahman — a full-stack developer passionate about building smooth, efficient, and user-focused web applications.
             </p>
             <p className="text-white/60 leading-relaxed font-mono text-sm uppercase tracking-wide">
               I work with the MERN stack to transform ideas into scalable, real-world products, from backend logic to modern interfaces. I believe great software should feel simple and intuitive, so I focus on performance, user experience, and continuous growth.

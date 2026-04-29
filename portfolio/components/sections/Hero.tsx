@@ -35,9 +35,9 @@ export function Hero() {
               </Button>
             </a>
             
-            <a href="/cv.pdf" target="_blank">
+            <a href="/Resume.pdf" download="Resume.pdf">
               <div className="group flex items-center gap-4 bg-transparent border border-white/10 rounded-full px-8 py-4 hover:bg-white/5 transition-all duration-300 cursor-pointer">
-                <span className="text-sm font-bold text-white">Download Cv</span>
+                <span className="text-sm font-bold text-white">Download Resume</span>
                 <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <ArrowDown className="w-4 h-4" />
                 </div>
