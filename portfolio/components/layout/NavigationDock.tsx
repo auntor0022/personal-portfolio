@@ -1,7 +1,8 @@
 "use client"
 
-import { Home, User, Briefcase, Mail, GraduationCap, Code2 } from "lucide-react"
+import { Home, User, Briefcase, Mail, GraduationCap, Code2, Sun, Moon, Award } from "lucide-react"
 import { useState, useEffect, useCallback } from "react"
+import { useTheme } from "next-themes"
 
 const navItems = [
   { icon: Home, label: "Home", href: "#home" },
@@ -9,11 +10,13 @@ const navItems = [
   { icon: Code2, label: "Skills", href: "#skills" },
   { icon: Briefcase, label: "Portfolio", href: "#portfolio" },
   { icon: GraduationCap, label: "Education", href: "#education" },
+  { icon: Award, label: "Certifications", href: "#certifications" },
   { icon: Mail, label: "Contact", href: "#contact" },
 ]
 
 export function NavigationDock() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const { setTheme, theme } = useTheme()
 
   const handleScroll = useCallback(() => {
     const sections = navItems.map((item) => {
@@ -97,6 +100,16 @@ export function NavigationDock() {
               )}
             </button>
           ))}
+
+          {/* Theme Toggle for Mobile */}
+          <button
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="relative p-2 transition-all duration-300 flex-1 flex justify-center text-textSecondary hover:text-foreground"
+            aria-label="Toggle theme"
+          >
+            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          </button>
         </div>
       </nav>
     </>
