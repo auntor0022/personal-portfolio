@@ -141,3 +141,53 @@
   animation: pulse-slow 6s ease-in-out infinite;
 }
 
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scroll 40s linear infinite reverse;
+}
+
+.pause-on-hover:hover .animate-scroll,
+.pause-on-hover:hover .animate-scroll-reverse {
+  animation-play-state: paused;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes float-icon {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-5px) rotate(2deg); }
+  66% { transform: translateY(2px) rotate(-2deg); }
+}
+
+.animate-float-icon {
+  animation: float-icon 5s ease-in-out infinite;
+}
+
+
+

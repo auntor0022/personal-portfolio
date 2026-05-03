@@ -14,7 +14,7 @@ const education = [
     institution: "Naogaon Government College",
     period: "2018 - 2020",
     location: "Naogaon, Rajshahi, Bangladesh",
-    description: "Completed Meta&apos;s professional certificate covering advanced React patterns, testing methodologies, UI/UX principles, and performance optimization techniques.",
+    description: "Completed Higher Secondary Certificate (HSC) in Science, building a strong foundation in Mathematics, Physics, and Chemistry.",
   },
 ];
 
