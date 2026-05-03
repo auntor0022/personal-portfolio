@@ -7,6 +7,13 @@ const certifications = [
     year: "2024",
     description: "Completed an intensive web development program covering HTML, CSS, JavaScript, and React, with hands-on experience building real-world projects.",
     link: "https://drive.google.com/file/d/17EK1TbRrGG7F47RxsDrM0SbinUJ-maaq/view?usp=sharing",
+  },
+  {
+    title: "Tech Debate 3.0 – Participation Certificate",
+    organization: "Varendra University (Department of CSE)",
+    year: "2025",
+    description: "Participated in a technical debate focused on critical thinking, logical reasoning, and communication skills",
+    link: "https://drive.google.com/file/d/1vNvR5MB6Ntj20fArJSlx19nS_Q8BP_94/view?usp=sharing",
   }
 ];
 

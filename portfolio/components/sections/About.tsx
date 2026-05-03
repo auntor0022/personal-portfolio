@@ -22,10 +22,15 @@ export function About() {
           <div className="glass-panel rounded-3xl p-10 bg-secondaryBg/50">
             <h3 className="text-3xl font-handwritten text-foreground mb-6">Who I Am</h3>
             <p className="text-textSecondary leading-relaxed mb-6 font-mono text-sm uppercase tracking-wide">
-              I&apos;m MD Auntor Rahman — a full-stack developer passionate about building smooth, efficient, and user-focused web applications.
+              I&apos;m MD Auntor Rahman — a passionate web developer with a strong foundation in modern JavaScript, React, and full-stack development using the MERN stack.
             </p>
-            <p className="text-textSecondary leading-relaxed font-mono text-sm uppercase tracking-wide">
-              I work with the MERN stack to transform ideas into scalable, real-world products, from backend logic to modern interfaces. I believe great software should feel simple and intuitive, so I focus on performance, user experience, and continuous growth.
+            <p className="text-textSecondary leading-relaxed font-mono text-sm uppercase tracking-wide mb-6">
+              I enjoy building real-world applications that solve practical problems, focusing on performance, clean architecture, and user experience. I have completed professional training in web development and applied my skills by building multiple full-stack projects.
+            </p>
+            <p className="text-textSecondary leading-relaxed font-mono text-sm uppercase tracking-wide mb-6">
+              My goal is to become a skilled software engineer capable of developing scalable and efficient applications used by real users.
+            </p>
+            <p className="text-textSecondary leading-relaxed font-mono text-sm uppercase tracking-wide mb-6">Technologies I work with include React, Node.js, Express, MongoDB, Firebase and modern frontend tools. I am continuously learning and improving my skills by building projects and exploring new technologies.
             </p>
           </div>
         </div>
