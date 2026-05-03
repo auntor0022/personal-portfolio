@@ -13,7 +13,7 @@ const buttonVariants = cva(
         outline:
           "border border-white/20 bg-transparent text-white hover:bg-white/10 hover:border-white/40 hover:scale-105",
         ghost: "hover:bg-white/10 hover:text-white",
-        icon: "rounded-lg border border-white-10 bg-secondaryBg/50 text-white hover:bg-white/10 hover:scale-105 backdrop-blur-md",
+        icon: "rounded-lg border border-white/10 bg-secondaryBg/50 text-white hover:bg-white/10 hover:scale-105 backdrop-blur-md",
       },
       size: {
         default: "h-12 px-8 py-2",

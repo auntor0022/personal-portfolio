@@ -6,12 +6,31 @@
 
 @layer base {
   :root {
-    --background: #050505;
-    --foreground: #FFFFFF;
+    --background: 255 255 255;
+    --foreground: 5 5 5;
+    --secondaryBg: 245 245 245;
+    --primaryAccent: 225 0 255;
+    --secondaryAccent: 77 85 255;
+    --textSecondary: 113 113 122;
+    --glass-bg: rgba(0, 0, 0, 0.03);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: rgba(0, 0, 0, 0.1);
+  }
+
+  .dark {
+    --background: 5 5 5;
+    --foreground: 255 255 255;
+    --secondaryBg: 15 15 15;
+    --primaryAccent: 225 0 255;
+    --secondaryAccent: 77 85 255;
+    --textSecondary: 161 161 170;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-shadow: rgba(0, 0, 0, 0.37);
   }
   
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primaryAccent/30 selection:text-white;
+    @apply bg-background text-foreground antialiased selection:bg-[#E100FF]/30 selection:text-white transition-colors duration-300;
   }
 }
 
@@ -30,7 +49,7 @@
   }
   
   .glass-panel {
-    @apply bg-secondaryBg/80 backdrop-blur-md border border-white-10 shadow-xl;
+    @apply bg-secondaryBg/80 backdrop-blur-md border border-black/10 dark:border-white/10 shadow-xl;
   }
 }
 
@@ -160,10 +179,10 @@
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
 }
 
 .glass-card::before {

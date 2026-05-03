@@ -6,13 +6,13 @@ export function Hero() {
     <section id="home" className="flex flex-col min-h-[auto] lg:min-h-screen justify-center px-6 sm:px-12 lg:px-24 py-12 lg:py-0 relative overflow-hidden">
       <div className="max-w-4xl z-10">
         <div data-aos="fade-up" data-aos-delay="100">
-          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-[#1a1a1a] border border-white/5 mb-10">
-            <span className="text-xs font-bold text-white/50 uppercase tracking-[0.2em] pt-0.5">Hello</span>
+          <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-secondaryBg border border-black/10 dark:border-white/10 mb-10">
+            <span className="text-xs font-bold text-textSecondary uppercase tracking-[0.2em] pt-0.5">Hello</span>
           </div>
         </div>
 
       <div data-aos="fade-up" data-aos-delay="200">
-        <h1 className="text-[40px] sm:text-[60px] lg:text-[72px] font-handwritten leading-tight mb-10 text-white">
+        <h1 className="text-[40px] sm:text-[60px] lg:text-[72px] font-handwritten leading-tight mb-10 text-foreground">
           <span className="block opacity-90">Crafting Interfaces That</span>
           <span className="block opacity-90 mb-4">Users Love</span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D946EF] via-[#A855F7] to-[#8B5CF6] filter drop-shadow-[0_0_30px_rgba(217,70,239,0.3)]">
@@ -22,7 +22,7 @@ export function Hero() {
       </div>
 
         <div data-aos="fade-up" data-aos-delay="300">
-          <p className="text-xl sm:text-2xl text-white/50 max-w-3xl leading-relaxed mb-16 font-mono tracking-wide">
+          <p className="text-xl sm:text-2xl text-textSecondary max-w-3xl leading-relaxed mb-16 font-mono tracking-wide">
             I design and develop responsive, user-focused web interfaces using modern technologies. My goal is to turn complex ideas into smooth, engaging digital experiences.
           </p>
         </div>
@@ -36,9 +36,9 @@ export function Hero() {
             </a>
             
             <a href="/Resume.pdf" download="Resume.pdf">
-              <div className="group flex items-center gap-4 bg-transparent border border-white/10 rounded-full px-8 py-4 hover:bg-white/5 transition-all duration-300 cursor-pointer">
-                <span className="text-sm font-bold text-white">Download Resume</span>
-                <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="group flex items-center gap-4 bg-transparent border border-black/10 dark:border-white/10 rounded-full px-8 py-4 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300 cursor-pointer">
+                <span className="text-sm font-bold text-foreground">Download Resume</span>
+                <div className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <ArrowDown className="w-4 h-4" />
                 </div>
               </div>

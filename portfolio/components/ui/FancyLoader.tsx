@@ -24,7 +24,7 @@ export function FancyLoader() {
             opacity: 0,
             transition: { duration: 0.8, ease: "easeInOut" }
           }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#050505]"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-background"
         >
           <div className="relative flex flex-col items-center">
             {/* Main Outer Ring */}
@@ -58,7 +58,7 @@ export function FancyLoader() {
               <span className="text-xs font-mono text-textSecondary uppercase tracking-[0.4em] animate-pulse">
                 Initializing
               </span>
-              <div className="mt-4 w-32 h-[1px] bg-white/5 relative overflow-hidden">
+              <div className="mt-4 w-32 h-[1px] bg-black-10 dark:bg-white/5 relative overflow-hidden">
                 <motion.div
                   initial={{ x: "-100%" }}
                   animate={{ x: "100%" }}

@@ -10,6 +10,9 @@ import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { FancyLoader } from "@/components/ui/FancyLoader";
 import { AOSInitializer } from "@/components/animations/AOSInitializer";
 
+import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -45,23 +48,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${geistSans.variable} ${jetbrainsMono.variable} ${caveat.variable} antialiased font-body flex flex-col lg:flex-row min-h-screen no-scrollbar bg-background text-foreground`}
       >
-        <AOSInitializer />
-        <FancyLoader />
-        <SmoothScroll>
-          <WispBackground />
-          <Sidebar />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AOSInitializer />
+          <FancyLoader />
+          <ThemeToggle />
+          <SmoothScroll>
+            <WispBackground />
+            <Sidebar />
 
-          <main className="flex-1 lg:ml-[480px] xl:ml-[550px] lg:mr-24 px-6 sm:px-12 lg:px-0 min-h-screen relative z-10">
-            {children}
-          </main>
+            <main className="flex-1 lg:ml-[480px] xl:ml-[550px] lg:mr-24 px-6 sm:px-12 lg:px-0 min-h-screen relative z-10">
+              {children}
+            </main>
 
-          <NavigationDock />
-        </SmoothScroll>
+            <NavigationDock />
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+

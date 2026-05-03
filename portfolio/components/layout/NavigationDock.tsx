@@ -61,14 +61,14 @@ export function NavigationDock() {
                 className={`w-5 h-5 transition-all duration-300 ${
                   activeIndex === idx
                     ? "text-[#D946EF]"
-                    : "text-textSecondary group-hover:text-white"
+                    : "text-textSecondary group-hover:text-foreground"
                 }`}
               />
               {activeIndex === idx && (
                 <span className="absolute right-[-10px] top-1/2 -translate-y-1/2 w-[4px] h-[4px] bg-[#D946EF] rounded-full shadow-[0_0_10px_rgba(217,70,239,0.8)]"></span>
               )}
               {/* Tooltip */}
-              <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1 rounded-lg bg-secondaryBg border border-white-10 text-xs text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-3 py-1 rounded-lg bg-secondaryBg border border-black/10 dark:border-white/10 text-xs text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                 {item.label}
               </span>
             </button>
@@ -78,7 +78,7 @@ export function NavigationDock() {
 
       {/* Mobile — bottom dock */}
       <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 lg:hidden w-[90%] max-w-[400px]">
-        <div className="glass-panel rounded-full py-2 px-4 flex justify-between items-center bg-secondaryBg/80 backdrop-blur-xl border border-white/10 shadow-2xl">
+        <div className="glass-panel rounded-full py-2 px-4 flex justify-between items-center bg-secondaryBg/80 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl">
           {navItems.map((item, idx) => (
             <button
               key={idx}
@@ -89,7 +89,7 @@ export function NavigationDock() {
                 className={`w-5 h-5 transition-all duration-300 ${
                   activeIndex === idx
                     ? "text-[#D946EF] scale-110"
-                    : "text-textSecondary hover:text-white"
+                    : "text-textSecondary hover:text-foreground"
                 }`}
               />
               {activeIndex === idx && (

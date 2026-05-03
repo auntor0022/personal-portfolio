@@ -1,13 +1,13 @@
 "use client"
 
-import { 
-  SiFigma,  
-  SiTailwindcss, 
-  SiNodedotjs, 
-  SiExpress, 
-  SiMongodb, 
-  SiReact, 
-  SiHtml5, 
+import {
+  SiFigma,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiReact,
+  SiHtml5,
   SiCss,
   SiPostman,
   SiFirebase,
@@ -57,13 +57,13 @@ export function Skills() {
   return (
     <section id="skills" className="px-6 sm:px-12 lg:px-24 py-24 overflow-hidden">
       <div data-aos="fade-up">
-        <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-[#1a1a1a] border border-white/5 mb-10">
-          <span className="text-xs font-bold text-white/50 uppercase tracking-[0.2em] pt-0.5">Skills</span>
+        <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-secondaryBg border border-black/10 dark:border-white/10 mb-10">
+          <span className="text-xs font-bold text-textSecondary uppercase tracking-[0.2em] pt-0.5">Skills</span>
         </div>
       </div>
 
       <div data-aos="fade-up" data-aos-delay="100">
-        <h2 className="text-[32px] sm:text-[40px] lg:text-[52px] font-handwritten mb-20 text-white leading-tight">
+        <h2 className="text-[32px] sm:text-[40px] lg:text-[52px] font-handwritten mb-20 text-foreground leading-tight">
           My&nbsp;
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D946EF] via-[#A855F7] to-[#8B5CF6]">
             Superpowers
@@ -72,21 +72,21 @@ export function Skills() {
       </div>
 
       <div className="space-y-24">
-        {skillCategories.map((category, catIdx) => (
+        {skillCategories.map((category) => (
           <div key={category.title} className="relative">
-            <div 
-              data-aos="fade-right" 
+            <div
+              data-aos="fade-right"
               className="flex items-center gap-4 mb-12 px-4"
             >
-              <h3 className="text-sm font-mono font-bold text-white/40 uppercase tracking-[0.4em]">
+              <h3 className="text-sm font-mono font-bold text-textSecondary uppercase tracking-[0.4em]">
                 {category.title}
               </h3>
-              <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent"></div>
+              <div className="h-px flex-1 bg-gradient-to-r from-black-10 dark:from-white/10 to-transparent"></div>
             </div>
-            
+
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 max-w-6xl mx-auto">
               {category.skills.map((skill, i) => (
-                <motion.div 
+                <motion.div
                   key={skill.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -96,26 +96,26 @@ export function Skills() {
                   className="relative flex flex-col items-center gap-5 group cursor-pointer"
                 >
                   {/* Dynamic Background Glow */}
-                  <div 
+                  <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-15 blur-3xl transition-opacity duration-500 rounded-full"
                     style={{ backgroundColor: skill.color }}
                   />
-                  
+
                   {/* Glass Card */}
-                  <div className="w-full aspect-square glass-card rounded-[2.5rem] flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:border-white/20">
-                    <skill.icon 
-                      className="w-14 h-14 transition-all duration-500 animate-float-icon" 
-                      style={{ 
+                  <div className="w-full aspect-square glass-card rounded-[2.5rem] flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:border-black/10/50 dark:group-hover:border-white/20">
+                    <skill.icon
+                      className="w-14 h-14 transition-all duration-500 animate-float-icon"
+                      style={{
                         color: skill.color,
                         filter: `drop-shadow(0 0 10px ${skill.color}40)`
-                      }} 
+                      }}
                     />
-                    
+
                     {/* Shimmer Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-black/5 dark:via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   </div>
-                  
-                  <span className="text-white/30 text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-center group-hover:text-white/80 transition-all duration-300 transform group-hover:scale-110">
+
+                  <span className="text-textSecondary dark:text-white/30 text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-center group-hover:text-foreground/80 transition-all duration-300 transform group-hover:scale-110">
                     {skill.name}
                   </span>
                 </motion.div>
